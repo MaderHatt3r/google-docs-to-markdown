@@ -2,7 +2,7 @@ on:
   pull_request: {}
   push:
     branches:
-      - main
+      - my-personal-changes
 
 name: Workflows
 
@@ -14,9 +14,9 @@ jobs:
       - name: Lint workflow files
         run: |
           # Install actionlint
-          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/my-personal-changes/scripts/download-actionlint.bash)
           # Install matcher for GitHub line annotations
-          curl 'https://raw.githubusercontent.com/rhysd/actionlint/main/.github/actionlint-matcher.json' > actionlint-matcher.json
+          curl 'https://raw.githubusercontent.com/rhysd/actionlint/my-personal-changes/.github/actionlint-matcher.json' > actionlint-matcher.json
           echo "::add-matcher::./actionlint-matcher.json"
 
           ./actionlint -color

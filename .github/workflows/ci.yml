@@ -2,7 +2,7 @@ on:
   pull_request: {}
   push:
     branches:
-      - main
+      - my-personal-changes
 
 name: Continuous Integration
 
